@@ -1,0 +1,21 @@
+select {
+	width:100%;
+}
+
+.pokemon{
+	width:33%;
+}
+
+#fight{
+	margin-top: 30px;
+	text-align: center;
+	display:none;
+}
+
+#result{
+	margin-top: 30px;
+}
+
+pre{
+	white-space: pre-line;
+}
