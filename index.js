@@ -23,7 +23,7 @@ app.get('/', function(request, response) {
 })
 
 app.post('/fight', function(request, response) {
-  response.send(response.send(pokemon.battle(request.body.team1, request.body.team2)));
+  response.send(pokemon.battle(request.body.team1, request.body.team2));
 })
 
 app.listen(app.get('port'), function() {
