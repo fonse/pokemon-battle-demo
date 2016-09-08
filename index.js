@@ -9,6 +9,7 @@ var app = express();
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(bodyParser.json());
 
 app.get('/', function(request, response) {
   var names = require(__dirname + '/data/names.json');
@@ -23,7 +24,7 @@ app.get('/', function(request, response) {
 })
 
 app.post('/fight', function(request, response) {
-  response.send(response.send(pokemon.battle(request.body.team1, request.body.team2)));
+  response.send(pokemon.battle(request.body.team1, request.body.team2));
 })
 
 app.listen(app.get('port'), function() {
